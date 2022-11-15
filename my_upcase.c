@@ -1,33 +1,28 @@
 #include <stdio.h>
 
-char *my_upcase(char *);
+void my_upcase(char *);
 
 int main(void)
 {
-	char *str = "hello";
-	char *newStr = my_upcase(str);
+	char* str = "hello";
 
 	printf("Old string: %s\n", str);
-	printf("New string: %s\n", newStr);
 
+	my_upcase(str);
 	return (0);
 }
 
-char *my_upcase(char *str)
+void my_upcase(char *word)
 {
-	char *newStr = "";
+	char newString[] = "";
 	int i = 0;
 
-	while (str[i])
+	while (word[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			newStr[i] = str[i] - 32;
-		}
+	        newString[i] = word[i] - 32;
+		printf("%c\n", newString[i]);
 		i++;
 	}
 
-	newStr[i] = '\0';
-
-	return (newStr);
+	newString[i] = '\0';
 }

@@ -1,28 +1,42 @@
 #include <stdio.h>
 
-void my_upcase(char *);
+/**Function Declaration/Prototype**/
+char *my_upcase(char *);
 
+/**
+ * main - main function
+ * Return: always 0
+ */
 int main(void)
 {
-	char* str = "hello";
+	char *str = "hello";
+	char *newString = my_upcase(str);
 
 	printf("Old string: %s\n", str);
+	printf("New string: %s\n", newString);
 
-	my_upcase(str);
 	return (0);
 }
 
-void my_upcase(char *word)
+/**
+ * my_upcase - returns string in uppercase
+ * @str: string argument
+ * Return: char pointer
+ */
+char *my_upcase(char *str)
 {
-	char newString[] = "";
+	char temp[100];
 	int i = 0;
+	char *newString = temp;
 
-	while (word[i])
+	while (str[i])
 	{
-	        newString[i] = word[i] - 32;
-		printf("%c\n", newString[i]);
+		if (str[i] >= 'a' && str[i] <= 'z')
+			temp[i] = str[i] - 32;
 		i++;
 	}
 
-	newString[i] = '\0';
+	temp[i] = '\0';
+
+	return (newString);
 }

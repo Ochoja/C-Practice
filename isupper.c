@@ -7,7 +7,7 @@
  */
 int isupper(char arg)
 {
-	if (arg >= 'a' && arg <= 'z')
+	if (arg >= 'A' && arg <= 'Z')
 		return (1);
 	else
 		return (0);

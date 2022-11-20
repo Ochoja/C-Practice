@@ -9,7 +9,7 @@ void my_string_formatting(char *, char *, int);
  */
 int main(void)
 {
-	my_string_formatting("Daniel", "Ochoja", 23);
+	my_string_formatting("John", "Doe", 23);
 	return (0);
 }
 

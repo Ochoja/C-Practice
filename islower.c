@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**Function prototype*/
-int islower(char);
+int is_lower(char);
 
 /**
  * main - main function
@@ -11,7 +11,7 @@ int main(void)
 {
 	int check;
 
-	check = islower('a');
+	check = is_lower('a');
 
 	if (check == 1)
 		printf("Argument is lowercase\n");
@@ -22,12 +22,11 @@ int main(void)
 }
 
 /**
- * islower - returns 1 if argument is lowercase, 0 otherwise
+ * is_lower - returns 1 if argument is lowercase, 0 otherwise
  * @arg: argument
  * Return: 1 or 0
  */
-
-int islower(char arg)
+int is_lower(char arg)
 {
 	if (arg >= 'a' && arg <= 'z')
 		return (1);

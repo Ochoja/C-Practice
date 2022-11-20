@@ -15,12 +15,12 @@ int main(void)
 
 /**
  * my_string_formatting - Print a string composed value
- * @name1: First name
- * @name2: Last name
- * @age: age
+ * @param_1: First name
+ * @param_2: Last name
+ * @param_3: age
  * Return: void
  */
-void my_string_formatting(char *name1, char *name2, int age)
+void my_string_formatting(char *param_1, char *param_2, int param_3)
 {
-	printf("Hello, my name is %s %s, I'm %d\n", name1, name2, age);
+	printf("Hello, my name is %s %s, I'm %d\n", param_1, param_2, param_3);
 }

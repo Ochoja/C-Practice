@@ -9,7 +9,7 @@ char *my_upcase(char *);
  */
 int main(void)
 {
-	char *str = "hello";
+	char *str = "heLlO";
 	char *newString = my_upcase(str);
 
 	printf("Old string: %s\n", str);
@@ -20,19 +20,22 @@ int main(void)
 
 /**
  * my_upcase - returns string in uppercase
- * @str: string argument
+ * @param_1: string argument
  * Return: char pointer
  */
-char *my_upcase(char *str)
+char *my_upcase(char *param_1)
 {
 	char temp[100];
 	int i = 0;
 	char *newString = temp;
 
-	while (str[i])
+	while (param_1[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			temp[i] = str[i] - 32;
+		if (param_1[i] >= 'a' && param_1[i] <= 'z')
+			temp[i] = param_1[i] - 32;
+		else
+			temp[i] = param_1[i];
+
 		i++;
 	}
 
